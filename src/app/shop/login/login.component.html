@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="contenedor">
+    <div class="main">  	
+        <input type="checkbox" id="chk" aria-hidden="true">
+    
+            <div class="signup">
+                <form [formGroup]="formRegister" (ngSubmit)="register()">
+                    <label for="chk" aria-hidden="true" >Registrarse</label>
+                    <input type="text" name="name" placeholder="Nombre" required="" formControlName="name">
+                    <input type="text" name="txt" placeholder="Apellido" required="" formControlName="lastname">
+                    <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+                    <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
+                    <input type="text" name="address" placeholder="Dirección" formControlName="address">
+                    <input type="number" name="address" placeholder="Telefono" formControlName="phone" >
+                    <button mat-raised-button>Registro</button>
+                </form>
+            </div>
+    
+            <div class="login">
+                <form [formGroup]="formLogin" (ngSubmit)="login()">
+                    <label for="chk" aria-hidden="true" class="titulo">Iniciar sesión</label>
+                    <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+                    <input type="password" name="pswd" placeholder="Password" required=""
+                    formControlName="password">
+                    <button mat-raised-button>Login</button>
+                </form>
+            </div>
+    </div>
+    
+</div>

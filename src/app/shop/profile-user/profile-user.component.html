@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="contenedor">
+    <div class="main">  	
+
+            <div class="signup">
+                <form [formGroup]="form" (ngSubmit)="actualizar()">
+                    <label for="chk" aria-hidden="true" >Modificar perfil</label>
+                    <input type="text" name="name" placeholder="Nombre" required="" formControlName="name">
+                    <input type="text" name="txt" placeholder="Apellido" required="" formControlName="lastname">
+                    <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+                    <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
+                    <input type="text" name="address" placeholder="Dirección" formControlName="address">
+                    <input type="number" name="address" placeholder="Telefono" formControlName="phone" >
+                    <button mat-raised-button>Modificar</button>
+                </form>
+            </div>
+    </div>
+    
+</div>

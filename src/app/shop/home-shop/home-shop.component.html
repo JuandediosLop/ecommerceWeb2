@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+
+<section class="product">
+    <div class="product-container" id="product-container-result">
+    </div>
+</section>
+
+<section class="product" >
+    <h2 class="product-category" >
+        Productos disponibles
+    </h2>
+    <div class="product-container" id="product-container" >
+
+            <div class="product-card" *ngFor="let producto of productos" [id]="producto._id">
+                <div class="product-image">
+                    <span class="discount-tag">
+                        
+                    </span>
+                    <img [src]="foto+producto.image" class="product-thumb" alt="Producto"> 
+                    <button class="card-btn2 add-btn" id="button-add" (click)="agregarCarrito(producto._id)">
+                        Añadir al carrito
+                    </button>
+                    <button class="card-btn add-btn" id="button-add" (click)="irProducto(producto._id)">
+                        Ver producto
+                    </button>
+                    
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">{{producto.name}}</h2>
+                    <p class="product-short-des">{{producto.description}}</p>
+                    <p class="product-short-des">Disponible: {{producto.stock}} </p>
+                    <span class="price">Q{{producto.price}}</span>
+    
+                </div>
+            </div>
+
+        
+    </div>
+</section>

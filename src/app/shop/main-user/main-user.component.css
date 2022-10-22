@@ -1,0 +1,30 @@
+div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+button{
+    background-color: #D94A64;
+    border: 1px solid;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+/*ultimo boton*/
+button:last-child{
+  padding: 1rem 2.7rem;
+}
+button:hover{
+    background-color: #ff7d7d;
+}

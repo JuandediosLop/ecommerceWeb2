@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="user">
+    <h2 >Hola, bienvenido {{user.name}} {{user.lastname}}</h2>
+    <button (click)="irPerfil()">Modificar perfil</button>
+    <button (click)="irOrdenes()">Ver pedidos</button>
+    <button (click)="cerrarSesion()">Cerrar sesión</button>
+</div>

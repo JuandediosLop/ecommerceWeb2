@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="pedidos">
+    <h2>Compras realizados</h2>
+    <div class="pedido" *ngFor=" let pedido of pedidos" >
+        <p class="number">No. Compra: {{pedido.contador}}</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of pedido.products">
+                    <td><img  class="foto" src="{{foto+producto.product.image}}" alt=""></td>
+                    <td>Producto: {{producto.product.name}}</td>
+                    <td>Cantidad: {{producto.quantity}}</td>
+                    <td>Precio: {{producto.product.price}}</td>
+                </tr>
+            </tbody>
+           
+            
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Total</th>
+                    <th>Estado</th>
+       
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total: {{pedido.total}}</td>
+                    <td>Estado: {{pedido.status}}</td>
+                </tr>
+                
+            </tbody>
+           
+            
+        </table>
+        
+
+    </div>
+
+</div>

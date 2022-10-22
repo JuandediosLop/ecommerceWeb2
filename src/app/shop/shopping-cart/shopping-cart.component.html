@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h2>Carrito de compras</h2>
+    <div class="detalle">
+        <div class="productos">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let producto of productos">
+                            <td> <img [src]="foto+producto.image" alt=""></td>
+                            <td>  {{producto.name}}</td>
+                            <td> <button (click)="bajarCantidad(producto)">-</button> {{producto.cantidadComprar}} <button (click)="subirCantidad(producto)">+</button></td>
+                            <td>Q{{producto.price}}</td>
+                            <td>Q{{producto.cantidadComprar * producto.price}}</td>
+                            <td><button (click)="eliminarProducto(producto)">X</button></td>
+                        </tr>
+                </table>
+            
+        </div>
+        <div class="venta">
+            <div class="total">
+                <h3>Total</h3>
+                <p>Q{{total}}</p>
+            </div>
+            <div class="botones">
+                <button class="btn btn-primary" (click)="relizarCompra()">Comprar</button>
+            </div>
+            
+        </div>
+    </div>
+    <p class="info">Envio aproximado de 24 a 48 horas según su dirección, <span>el pago se realiza al recibir su producto</span> <br> *Aplican restricciones</p>
+  </div>
